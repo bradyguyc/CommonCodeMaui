@@ -143,7 +143,7 @@ namespace CommonCode.MSALClient
         /// </summary>
         /// <param name="scopes">desired scopes</param>
         /// <returns></returns>
-        public async Task<AuthenticationResult> AcquireTokenInteractiveAsync(string[] scopes)
+        internal async Task<AuthenticationResult> AcquireTokenInteractiveAsync(string[] scopes)
         {
             this.MSALClientHelper.UseEmbedded = this.UseEmbedded;
             return await this.MSALClientHelper.SignInUserInteractivelyAsync(scopes).ConfigureAwait(false);
