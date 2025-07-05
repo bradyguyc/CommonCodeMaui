@@ -237,7 +237,7 @@ namespace CommonCode.CustomControls
                     control.OnPropertyChanged(nameof(ErrorMessage));
                     control.OnPropertyChanged(nameof(TitleContainerColor));
                     control.OnPropertyChanged(nameof(TitleOnContainerColor));
-                    control.ShowErrorPopup = true;
+                 
                 }
             }
             catch (Exception ex)
