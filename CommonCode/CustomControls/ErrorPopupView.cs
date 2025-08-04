@@ -158,6 +158,7 @@ namespace CommonCode.CustomControls
                                $"What You Can Do: {WhatYouCanDo}";
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
+                    Debug.WriteLine($"Copying to clipboard: {error}");
                     Clipboard.Default.SetTextAsync(error);
                 });
             }
