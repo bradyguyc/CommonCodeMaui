@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\r3\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E3E9EE9E-ED87-404F-8EEF-D79626CC1557}|CommonCode\\CommonCode.csproj|c:\\r3\\commoncode\\commoncode.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E3E9EE9E-ED87-404F-8EEF-D79626CC1557}|CommonCode\\CommonCode.csproj|solutionrelative:commoncode\\commoncode.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3E9EE9E-ED87-404F-8EEF-D79626CC1557}|CommonCode\\CommonCode.csproj|c:\\r3\\commoncode\\styles\\controltemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E3E9EE9E-ED87-404F-8EEF-D79626CC1557}|CommonCode\\CommonCode.csproj|solutionrelative:commoncode\\styles\\controltemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,36 +66,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ControlTemplates.xaml",
-              "DocumentMoniker": "C:\\r3\\CommonCode\\Styles\\ControlTemplates.xaml",
-              "RelativeDocumentMoniker": "CommonCode\\Styles\\ControlTemplates.xaml",
-              "ToolTip": "C:\\r3\\CommonCode\\Styles\\ControlTemplates.xaml",
-              "RelativeToolTip": "CommonCode\\Styles\\ControlTemplates.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T14:43:50.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommonCode.csproj",
-              "DocumentMoniker": "c:\\r3\\CommonCode\\CommonCode.csproj",
-              "RelativeDocumentMoniker": "CommonCode\\CommonCode.csproj",
-              "ToolTip": "c:\\r3\\CommonCode\\CommonCode.csproj",
-              "RelativeToolTip": "CommonCode\\CommonCode.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBsAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-09T14:13:21.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
