@@ -1,14 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+	<!--
+	Pseudocode / Plan:
+	1. Introduce properties for Preview 7 versions (Maui & Microsoft.Extensions) to centralize version management.
+	2. Update Microsoft.Maui.* package references to use new $(MauiVersion).
+	3. Update Microsoft.Extensions.Configuration* packages to new $(MicrosoftExtensionsVersion).
+	4. Keep other package versions unchanged.
+	5. Leave note that exact build/revision numbers may need adjustment to match available NuGet packages.
+	-->
+
 	<PropertyGroup>
 		<TargetFrameworks>net10.0-android;net10.0-ios;net10.0</TargetFrameworks>
-		
-		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net10.0-tizen</TargetFrameworks> -->
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		
+		<!-- Set Preview 7 base versions (adjust to actual published build numbers if necessary) -->
+		<MauiVersion>10.0.0-preview.7</MauiVersion>
+		<MicrosoftExtensionsVersion>10.0.0-preview.7</MicrosoftExtensionsVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
@@ -20,27 +30,32 @@
 
 	<ItemGroup>
 		<PackageReference Include="DevExpress.Maui.Core" Version="24.2.7" />
+		
+		<!-- MAUI Preview 7 -->
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Core" Version="$(MauiVersion)" />
+		
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="11.2.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Markup" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.5.25277.114" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.0-preview.5.25277.114" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0-preview.5.25277.114" />
+		
+		<!-- Microsoft.Extensions Preview 7 -->
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="$(MicrosoftExtensionsVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="$(MicrosoftExtensionsVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="$(MicrosoftExtensionsVersion)" />
+		
 		<PackageReference Include="Microsoft.Identity.Client" Version="4.73.0-preview" />
 		<PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="4.73.0-preview" />
 
-		<PackageReference Include="Microsoft.Maui.Core" Version="10.0.0-preview.4.25263.4" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Syncfusion.Maui.Popup" Version="29.2.9" />
-
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Styles\ControlTemplates.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+   <MauiXaml Update="Styles\ControlTemplates.xaml">
+     <Generator>MSBuild:Compile</Generator>
+   </MauiXaml>
 	</ItemGroup>
 
 </Project>
